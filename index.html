@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Sentiment Analysis</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 { 
+            color: #2C3E50; 
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .dashboard-link { 
+            display: block; 
+            padding: 20px; 
+            background-color: white; 
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2980b9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+        .dashboard-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .findings { 
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            font-weight: bold;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Sentiment Analysis Dashboard</h1>
+    
+    <div class="findings">
+        <h2>Key Findings</h2>
+        <ul>
+            <li>The best restaurant based on combined score is <span class="highlight">Yang Kee Dumpling</span> with a score of <span class="highlight">4.24/5</span>.</li>
+            <li>The best high-rated restaurant is <span class="highlight">Yang Kee Dumpling</span> with a combined score of <span class="highlight">4.24/5</span>.</li>
+            <li>The best low-rated restaurant is <span class="highlight">Paesanos</span> with a combined score of <span class="highlight">4.14/5</span>.</li>
+            <li>Restaurant with most positive TextBlob sentiment: <span class="highlight">Open Rice Kitchen</span> (score: <span class="highlight">0.468</span>)</li>
+            <li>Restaurant with most negative TextBlob sentiment: <span class="highlight">Teabo Café</span> (score: <span class="highlight">0.077</span>)</li>
+        </ul>
+    </div>
+    
+    <h2>Interactive Visualizations</h2>
+    <div class="dashboard-container">
+        <a href="combined_score_all.html" class="dashboard-link">
+            <h3>Combined Score Analysis</h3>
+            <p>View the overall ranking of restaurants based on combined review and sentiment scores</p>
+        </a>
+        <a href="comparison_all.html" class="dashboard-link">
+            <h3>Rating Comparison</h3>
+            <p>Compare Google ratings with sentiment scores across all restaurants</p>
+        </a>
+        <a href="sentiment_all.html" class="dashboard-link">
+            <h3>Sentiment Breakdown</h3>
+            <p>See the percentage of positive, neutral, and negative sentiment for each restaurant</p>
+        </a>
+        <a href="raw_sentiment_all.html" class="dashboard-link">
+            <h3>Raw Sentiment Scores</h3>
+            <p>View the TextBlob sentiment scores on the -1 to +1 scale</p>
+        </a>
+        <a href="scatter_plot.html" class="dashboard-link">
+            <h3>Scatter Plot Analysis</h3>
+            <p>Visualize the relationship between Google ratings and sentiment scores</p>
+        </a>
+    </div>
+    
+    <div class="findings">
+        <h2>About This Project</h2>
+        <p>This project analyzes restaurant reviews in Davis, CA using sentiment analysis and natural language processing techniques. The visualizations show how customer sentiment relates to traditional ratings and helps identify the most consistently positively-reviewed restaurants.</p>
+        <p>Created by Candice Chan, Vicky Chan, and Daniel Cayapan for STA 141B.</p>
+    </div>
+</body>
+</html>
+    
